@@ -1,5 +1,5 @@
 # PyScope
-An open-source recursive forensic file scanning tool developed as a learner project.
+An open-source recursive forensic file scanning tool developed as a learner project. This project is actively being worked on and will improve along with my skills in Python. I plan to add more advanced features, polish the code and add more comments for fellow learners.
 
 
 <img width="3420" height="2214" alt="image" src="https://github.com/user-attachments/assets/2ca135c0-3cee-40e2-bf3a-151696987363" />
@@ -8,7 +8,7 @@ An open-source recursive forensic file scanning tool developed as a learner proj
 <img width="3420" height="2214" alt="image" src="https://github.com/user-attachments/assets/f5c9c508-318e-4b83-a11e-90b4c6dca505" />
 
 
-Features includes:
+Features include:
 ===================================================
   - Individual file examination
   - Recursive directory scanning
@@ -54,12 +54,14 @@ All notable changes to this project will be documented in this file.
 - Initial release of the project.
 
 
-This project is actively being worked on and will improve along with my skills in Python. I plan to add more advanced features, polish the code and add more comments for fellow learners.
-
-Known bugs:
+# Known bugs:
   - [FIXED] ~~Crash when handling: PermissionError: [Errno 13] Permission denied: '/usr/sbin/weakpass_edit'~~
+  - Operation will timeout reading some files.
+  - JSON unable to serialize signature value due to it being a bytes object.
+
 
 Lessons I've learned so far:
+=============================================
   1) Comment, comment, comment. Comments make the code easier to read and maintain. I wish had started adding them sooner, it's made finding specific functions easier.
   2) Organize the code. When I first started, it was easy to find functions and specific lines, but as it grew, it became harder. I started organizing functions by moving them closer to similar functions, so it's like sorting functions by category.
   3) Google, StackOverflow, and just forums in general are your friend. There is always a useful piece of information out there that can help fill in the blanks and help breakdown any roadblock.
