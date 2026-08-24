@@ -1,7 +1,13 @@
 # PyScope
 An open-source recursive forensic file scanning tool developed as a learner project.
 
-<img width="788" height="802" alt="Screenshot 2026-08-23 at 9 38 36 PM" src="https://github.com/user-attachments/assets/9f5e7674-eee1-493a-bf4e-b45a980b48f7" />
+
+<img width="3420" height="2214" alt="image" src="https://github.com/user-attachments/assets/2ca135c0-3cee-40e2-bf3a-151696987363" />
+
+
+<img width="3420" height="2214" alt="image" src="https://github.com/user-attachments/assets/f5c9c508-318e-4b83-a11e-90b4c6dca505" />
+
+
 
 Features includes:
   - Individual file examination
@@ -11,6 +17,15 @@ Features includes:
   - Simple signature confidence
   - Error handling
   - Cross-platform compatibility
+  - Save scans to json file
+  - Detect changes in files and save reports to json file
+  - Detect hard link groups
+  - Display UID & GID in scan summary
+  - Display invalid MD5/SHA256 hashes from previous scans.
+  - Display file permissions
+  - Display file flags
+  - OS detection
+  - Some fancy ASCII art
 
 This project is actively being worked on and will improve along with my skills in Python. I plan to add more advanced features, polish the code and add more comments for fellow learners.
 
