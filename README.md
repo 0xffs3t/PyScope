@@ -15,5 +15,6 @@ Features includes:
 This project is actively being worked on and will improve along with my skills in Python. I plan to add more advanced features, polish the code and add more comments for fellow learners.
 
 As of now, I only know of one bug:
-  - PermissionError: [Errno 13] Permission denied: '/usr/sbin/weakpass_edit'
+  - ~~PermissionError: [Errno 13] Permission denied: '/usr/sbin/weakpass_edit'~~
+
 This is probably easier to fix than I think, but at the time of publishing this, I have grown tired and will tackle it when during my next work session.
