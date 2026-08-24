@@ -82,18 +82,18 @@ def scan_directory(dir_path):
     total_size = 0
 
     for path in directory.rglob("*"):
-        if path.is_file():
-            files_discovered += 1
-            try:
+        try:
+            if path.is_file():
+                files_discovered += 1
                 result = examine_file(path)
 
                 if result:
                     files_analyzed += 1
                     total_size += result.size
                     display_result(result)
-            except OSError as error:
-                files_failed += 1
-                print(R + f'Could not analyze {path}: {error}' + W)
+        except OSError as error:
+            files_failed += 1
+            print(R + f'Could not analyze {path}: {error}' + W)
 
     return ScanResult(
         files_discovered=files_discovered,
