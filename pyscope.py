@@ -56,6 +56,7 @@ class ScanResult:
     total_size: int
 
 
+# this function is currently not yet used
 def analyze_path(path):
     path = Path(path)
 
