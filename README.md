@@ -8,6 +8,25 @@ An open-source recursive forensic file scanning tool developed as a learner proj
 <img width="3420" height="2214" alt="image" src="https://github.com/user-attachments/assets/f5c9c508-318e-4b83-a11e-90b4c6dca505" />
 
 
+Features includes:
+===================================================
+  - Individual file examination
+  - Recursive directory scanning
+  - Checking file format headers/signatures
+  - MD5 & SHA256 hash calculation
+  - Simple signature confidence
+  - Error handling
+  - Cross-platform compatibility
+  - Save scans to json file
+  - Detect changes in files and save reports to json file
+  - Detect hard link groups
+  - Display UID & GID in scan summary
+  - Display invalid MD5/SHA256 hashes from previous scans.
+  - Display file permissions
+  - Display file flags
+  - OS detection
+  - Some fancy ASCII art
+
 
 # Changelog
 
@@ -34,23 +53,6 @@ All notable changes to this project will be documented in this file.
 ### Added
 - Initial release of the project.
 
-Features includes:
-  - Individual file examination
-  - Recursive directory scanning
-  - Checking file format headers/signatures
-  - MD5 & SHA256 hash calculation
-  - Simple signature confidence
-  - Error handling
-  - Cross-platform compatibility
-  - Save scans to json file
-  - Detect changes in files and save reports to json file
-  - Detect hard link groups
-  - Display UID & GID in scan summary
-  - Display invalid MD5/SHA256 hashes from previous scans.
-  - Display file permissions
-  - Display file flags
-  - OS detection
-  - Some fancy ASCII art
 
 This project is actively being worked on and will improve along with my skills in Python. I plan to add more advanced features, polish the code and add more comments for fellow learners.
 
