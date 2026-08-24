@@ -5,7 +5,7 @@
 # Originally developed on MacOS, but with compatibility in mind.
 
 
-#  ------- IMPORT NECESSARY MODULES -------
+# ------- IMPORT NECESSARY MODULES -------
 
 
 import os
@@ -21,7 +21,7 @@ from typing import Optional
 from dataclasses import dataclass
 
 
-#  ------- DEFINE COLOR VARIABLES -------
+# ------- DEFINE COLOR VARIABLES -------
 
 
 W = '\033[0m'  # white (normal)
@@ -34,7 +34,7 @@ C = '\033[36m'  # cyan
 GR = '\033[37m'  # gray
 
 
-#  ------- ESTABLISH HASH VALIDATION CLASSES -------
+# ------- ESTABLISH HASH VALIDATION CLASSES -------
 
 
 @dataclass
@@ -47,7 +47,7 @@ class HashValidation:
     invalid_sha256: Optional[str]
 
 
-#  ------- ESTABLISH FILE SIGNATURE CLASSES -------
+# ------- ESTABLISH FILE SIGNATURE CLASSES -------
 
 
 @dataclass
@@ -59,7 +59,7 @@ class FileSignature:
     confidence: str = "high"
 
 
-#  ------- ESTABLISH FILE RESULT CLASSES -------
+# ------- ESTABLISH FILE RESULT CLASSES -------
 
 
 @dataclass
@@ -86,7 +86,7 @@ class FileResult:
     sha256: str
 
 
-#  ------- ESTABLISH SCAN RESULT CLASSES -------
+# ------- ESTABLISH SCAN RESULT CLASSES -------
 
 
 @dataclass
@@ -99,7 +99,7 @@ class ScanResult:
     files: list[FileResult]
 
 
-#  ------- FILE SIGNATURE DATABASE -------
+# ------- FILE SIGNATURE DATABASE -------
 
 
 FILE_SIGNATURES = [
@@ -309,14 +309,14 @@ def get_flags(file_info):
     return flags
 
 
-#  ------- GET FILE PERMISSIONS -------
+# ------- GET FILE PERMISSIONS -------
 
 
 def get_permissions(file_info):
     return stat.filemode(file_info.st_mode)
 
 
-#  -------  GET UID & GID -------
+# -------  GET UID & GID -------
 
 
 def get_ownership(file_info):
@@ -336,7 +336,7 @@ def get_ownership(file_info):
     return username, groupname
 
 
-#  ------- SCAN DIRECTORY AND SUBDIRECTORIES -------
+# ------- SCAN DIRECTORY AND SUBDIRECTORIES -------
 
 
 def scan_directory(dir_path):
@@ -398,7 +398,7 @@ def scan_directory(dir_path):
     )
 
 
-#  ------- SAVE SCAN TO MANIFEST -------
+# ------- SAVE SCAN TO MANIFEST -------
 
 
 def save_scan(scan_result):
@@ -442,7 +442,7 @@ def save_scan(scan_result):
     return output_path
 
 
-#  ------- GENERATE SCAN MANIFEST NAME -------
+# ------- GENERATE SCAN MANIFEST NAME -------
 
 
 def get_scan_filename():
@@ -450,7 +450,7 @@ def get_scan_filename():
     return f"scan_{timestamp}.json"
 
 
-#  ------- FIND ALL SCAN MANIFESTS -------
+# ------- FIND ALL SCAN MANIFESTS -------
 
 
 def find_scan_files():
@@ -459,14 +459,14 @@ def find_scan_files():
     return sorted(script_directory.glob("scan_*.json"))
 
 
-#  ------- LOAD SCAN -------
+# ------- LOAD SCAN -------
 
 def load_scan(manifest_path):
     with open(manifest_path, "r") as file:
         return json.load(file)
 
 
-#  -------  LOAD LAST SCAN -------
+# -------  LOAD LAST SCAN -------
 
 
 def load_previous_scan():
@@ -480,7 +480,7 @@ def load_previous_scan():
     return load_scan(latest_scan)
 
 
-#  ------- VALIDATE LAST SCAN MANIFEST -------
+# ------- VALIDATE LAST SCAN MANIFEST -------
 
 
 def validate_scan(scan_result, previous_scan):
@@ -563,7 +563,7 @@ def validate_scan(scan_result, previous_scan):
     return changes
 
 
-#  ------- SAVE FILE CHANGES AFTER VALIDATION -------
+# ------- SAVE FILE CHANGES AFTER VALIDATION -------
 
 
 def save_changes(changes):
@@ -579,7 +579,7 @@ def save_changes(changes):
     print(G + f"Report saved to: {output_path}" + W)
 
 
-#  ------- VALIDATE FILE EXTENSIONS -------
+# ------- VALIDATE FILE EXTENSIONS -------
 
 
 def check_extension(file_extension, file_signature):
@@ -589,7 +589,7 @@ def check_extension(file_extension, file_signature):
     return file_extension.lower() not in file_signature.extensions
 
 
-#  ------- DETECT FILE TYPE -------
+# ------- DETECT FILE TYPE -------
 
 
 def detect_file_type(file_path):
@@ -606,7 +606,7 @@ def detect_file_type(file_path):
     return None
 
 
-#  ------- VALIDTAE MD5 & SHA256 -------
+# ------- VALIDTAE MD5 & SHA256 -------
 
 
 def validate_hashes(calculated_hashes, expected_md5, expected_sha256):
@@ -620,7 +620,7 @@ def validate_hashes(calculated_hashes, expected_md5, expected_sha256):
     )
 
 
-#  ------- CALCULATE FILE HASHES -------
+# ------- CALCULATE FILE HASHES -------
 
 
 def calculate_hash(file_path):
@@ -638,7 +638,7 @@ def calculate_hash(file_path):
     }
 
 
-#  ------- RETRIEVE FILE METADATA -------
+# ------- RETRIEVE FILE METADATA -------
 
 
 def examine_file(input_path):
@@ -708,7 +708,7 @@ def examine_file(input_path):
     )
 
 
-#  ------- DISPLAY FILE METADATA -------
+# ------- DISPLAY FILE METADATA -------
 
 
 def display_result(result):
@@ -741,7 +741,7 @@ def display_result(result):
     print('SHA256: ' + B + f'{result.sha256}' + W)
 
 
-#  ------- DISPLAY SCAN SUMMARY -------
+# ------- DISPLAY SCAN SUMMARY -------
 
 
 def display_scan_result(scan_result):
@@ -756,7 +756,7 @@ def display_scan_result(scan_result):
     print('Hard Link Groups: ' + P + f'{scan_result.hard_link_groups}' + W)
 
 
-#  ------- MAIN SPACE -------
+# ------- MAIN SPACE -------
 # this is where the script starts on the user's end.
 
 
@@ -772,330 +772,3 @@ print()
 input_path = input('Path to directory or file > ')
 path = Path(input_path)
 analyze_path(path)
-    path: Path
-    size: int
-    extension: str
-    file_type: str
-    signature: Optional[bytes]
-    confidence: str
-    extension_mismatch: bool
-    modified: datetime
-    accessed: datetime
-    created: datetime
-    md5: str
-    sha256: str
-
-
-@dataclass
-class ScanResult:
-    files_discovered: int
-    files_analyzed: int
-    files_failed: int
-    total_size: int
-
-
-# this function is currently not yet used
-def analyze_path(path):
-    path = Path(path)
-
-    if path.is_file():
-        result = examine_file(path)
-
-    if result:
-        display_result(result)
-
-    elif path.is_dir():
-        scan_directory(path)
-
-    else:
-        print(R + 'The path does not exist or is not a file or directory.')
-
-
-def scan_directory(dir_path):
-    directory = Path(dir_path)
-
-    files_discovered = 0
-    files_analyzed = 0
-    files_failed = 0
-    total_size = 0
-
-    for path in directory.rglob("*"):
-        try:
-            if path.is_file():
-                files_discovered += 1
-                result = examine_file(path)
-
-                if result:
-                    files_analyzed += 1
-                    total_size += result.size
-                    display_result(result)
-        except OSError as error:
-            files_failed += 1
-            print(R + f'Could not analyze {path}: {error}' + W)
-
-    return ScanResult(
-        files_discovered=files_discovered,
-        files_analyzed=files_analyzed,
-        files_failed=files_failed,
-        total_size=total_size
-    )
-
-
-FILE_SIGNATURES = [
-    FileSignature(
-        signature=b"\x47\x49\x46\x38",
-        file_type="GIF Image",
-        extensions=[".gif"],
-        confidence="high"
-    ),
-
-    FileSignature(
-        signature=b"\xFF\xD8\xFF",
-        file_type="JPEG Image",
-        extensions=[".jpg", ".jpeg"],
-        confidence="high"
-    ),
-
-
-    FileSignature(
-        signature=b"\x89PNG\r\n\x1a\n",
-        file_type="PNG Image",
-        extensions=[".png"],
-        confidence="high"
-    ),
-
-    FileSignature(
-        signature=b"PK\x03\x04",
-        file_type="ZIP Archive",
-        extensions=[".zip"],
-        confidence="medium"
-    ),
-
-    FileSignature(
-        signature=b"MZ",
-        file_type="Windows Executable",
-        extensions=[".exe", ".dll"],
-        confidence="high"
-    ),
-
-    FileSignature(
-        signature=b"\x25\x50\x44\x46",
-        file_type="PDF Document",
-        extensions=[".pdf"],
-        confidence="high"
-    ),
-
-    FileSignature(
-        signature=b"\x52\x49\x46\x46",
-        file_type="WAV Audio",
-        extensions=[".wav"],
-        confidence="high"
-    ),
-
-    FileSignature(
-        signature=b"ID3",
-        file_type="MP3 Audio",
-        extensions=[".mp3"],
-        confidence="medium"
-    ),
-
-    FileSignature(
-        signature=b"\x42\x4D",
-        file_type="Bitmap Image",
-        extensions=[".bmp"],
-        confidence="high"
-    ),
-
-    FileSignature(
-        signature=b"Rar!\x1A\x07\x01\x00",
-        file_type="RAR Archive",
-        extensions=[".rar"],
-        confidence="high"
-    ),
-
-    FileSignature(
-        signature=b"Rar!\x1A\x07\x00",
-        file_type="RAR Archive",
-        extensions=[".rar"],
-        confidence="high"
-    ),
-
-    FileSignature(
-        signature=b"\x1F\x8B",
-        file_type="GZIP Archive",
-        extensions=[".gz"],
-        confidence="high"
-    ),
-
-    FileSignature(
-        signature=b"7z\xBC\xAF\x27\x1C",
-        file_type="7-Zip Archive",
-        extensions=[".7z"],
-        confidence="high"
-    ),
-
-    FileSignature(
-        signature=b"\x7FELF",
-        file_type="ELF Binary",
-        extensions=["", ".elf"],
-        confidence="high"
-    )
-]
-
-
-def check_extension(file_extension, file_signature):
-    if file_signature is None:
-        return False
-
-    return file_extension.lower() not in file_signature.extensions
-
-
-def detect_file_type(file_path):
-    with open(file_path, "rb") as file:
-        header = file.read(32)
-
-    for file_signature in FILE_SIGNATURES:
-        start = file_signature.offset
-        end = len(file_signature.signature)
-
-        if header[start:end] == file_signature.signature:
-            return file_signature
-
-    return None
-
-
-def calculate_hash(file_path):
-    md5 = hashlib.md5()
-    sha256 = hashlib.sha256()
-
-    with open(file_path, "rb") as file:
-        while chunk := file.read(4096):
-            md5.update(chunk)
-            sha256.update(chunk)
-
-    return {
-        "md5": md5.hexdigest(),
-        "sha256": sha256.hexdigest()
-    }
-
-
-def examine_file(input_path):
-    file = Path(input_path)
-
-    if not file.exists():
-        print(R + 'File does not exist.')
-        return
-
-    if not file.is_file():
-        print(R + 'The path is not a file.')
-        return
-
-    file_info = file.stat()
-
-    modified_time = datetime.fromtimestamp(file_info.st_mtime)
-    accessed_time = datetime.fromtimestamp(file_info.st_atime)
-    created_time = datetime.fromtimestamp(file_info.st_ctime)
-
-    file_signature = detect_file_type(file)
-
-    if file_signature:
-        file_type = file_signature.file_type
-        confidence = file_signature.confidence
-        matched_signature = file_signature.signature
-
-    else:
-        file_type = "Unknown / Unrecognized"
-        confidence = "none"
-        matched_signature = None
-
-    extension_mismatch = check_extension(file.suffix, file_signature)
-
-    hashes = calculate_hash(file)
-    md5_hash = hashes["md5"]
-    sha256_hash = hashes["sha256"]
-
-    return FileResult(
-        name=file.name,
-        path=file.resolve(),
-        size=file_info.st_size,
-        extension=file.suffix,
-        file_type=file_type,
-        signature=matched_signature,
-        confidence=confidence,
-        extension_mismatch=extension_mismatch,
-        modified=modified_time,
-        accessed=accessed_time,
-        created=created_time,
-        md5=md5_hash,
-        sha256=sha256_hash
-    )
-
-
-def display_result(result):
-    print()
-    print('Name: ' + G + f'{result.name}' + W)
-    print('Path: ' + G + f'{result.path}' + W)
-    print('Size: ' + G + f'{result.size}' + W)
-    print('Extension: ' + G + f'{result.extension}' + W)
-    print('File Type: ' + G + f'{result.file_type}' + W)
-    if result.signature:
-        print('Signature: ' + C + f'{result.signature.hex(" ")}' + W)
-    else:
-        print('Signature: ' + GR + 'None detected' + W)
-    print('Confidence: ' + C + f'{result.confidence}' + W)
-    if result.extension_mismatch:
-        print(R + 'WARNING: Extension does not match detected file type.' + W)
-
-    print('Modified: ' + O + f'{result.modified}' + W)
-    print('Accessed: ' + O + f'{result.accessed}' + W)
-    print('Created: ' + O + f'{result.created}' + W)
-
-    print('MD5: ' + B + f'{result.md5}' + W)
-    print('SHA256: ' + B + f'{result.sha256}' + W)
-
-
-def display_scan_result(scan_result):
-    print()
-    print('===== Scan Complete =====')
-    print()
-    print('Scanned: ' + GR + f'{input_path}' + W)
-    print('Files Discovered: ' + GR + f'{scan_result.files_discovered}' + W)
-    print('Files Analyzed: ' + G + f'{scan_result.files_analyzed}' + W)
-    print('Files Failed: ' + R + f'{scan_result.files_failed}' + W)
-    print('Total Size: ' + O + f'{scan_result.total_size} bytes' + W)
-
-
-def clear_screen():
-    if os.name == "nt":  # Windows
-
-        # use os.system for legacy Windows, fallback to ANSI for modern Windows
-        if os.system("cls") != 0:
-            sys.stdout.write("\033[H\033[2J")
-            sys.stdout.flush()
-
-    else:  # macOS and Linux
-        sys.stdout.write("\033[H\033[2J")
-        sys.stdout.flush()
-
-
-# this is where the script starts on the user's end.
-clear_screen()
-print()
-print('===== PyScope v0.1 =====')
-print()
-input_path = input('Path to directory or file > ')
-path = Path(input_path)
-
-# determine if input is a valid file or directory then examine/scan accordingly
-if path.is_file():
-    result = examine_file(path)
-
-    if result:
-        display_result(result)
-
-elif path.is_dir():
-    scan_result = scan_directory(path)
-    display_scan_result(scan_result)
-
-else:
-    print(R + 'The path does not exist or is not a file or directory.')
