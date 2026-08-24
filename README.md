@@ -9,6 +9,31 @@ An open-source recursive forensic file scanning tool developed as a learner proj
 
 
 
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## - 2026-08-24
+### Added
+- Added a new dark mode toggle to the settings menu.
+- Implemented user profile customization options.
+- Save scans to json file
+- Detect changes in files and save reports to json file
+- Detect hard link groups
+- Display UID & GID in scan summary
+- Display invalid MD5/SHA256 hashes from previous scans.
+- Display file permissions
+- Display file flags
+- OS detection
+- Some fancy ASCII art
+
+### Fixed
+- Fixed a bug causing the application to crash when handling certain errors.
+
+## - 2026-08-23
+### Added
+- Initial release of the project.
+
 Features includes:
   - Individual file examination
   - Recursive directory scanning
