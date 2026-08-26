@@ -1,14 +1,12 @@
 # PyScope
 An open-source recursive forensic file scanning tool developed as a learner project. This project is actively being worked on and will improve along with my skills in Python. I plan to add more advanced features, polish the code and add more comments for fellow learners.
-
-==================================================
+======
 
 <img width="566" height="425" alt="Screenshot 2026-08-25 at 10 20 14 PM" src="https://github.com/user-attachments/assets/7a996700-9204-4e83-870d-2d3b1f774ddb" />
+======
 
-
-===================================================
 # Usage examples:
----------------------
+------
 ```
 usage: pyscope.py [-h] [--version] [-v] [-l PATH] [-c PATH] [-r] [-C] path
 
@@ -35,11 +33,10 @@ Pattern scanning:
 >  python pyscope.py "/home/user/pictures/*.jpg"
 
 ```
-
-===================================================
+======
 
 Features include:
-===================================================
+======
   - Individual file examination
   - Recursive directory scanning
   - Pattern scanning
@@ -57,10 +54,10 @@ Features include:
   - OS detection
   - Some fancy ASCII art
 
-=========================================
-
+======
 # Changelog
-======================================
+
+======
 All notable changes to this project will be documented in this file.
 
 ## - 2026-08-25
@@ -78,8 +75,7 @@ All notable changes to this project will be documented in this file.
 - Removed obsolete code
 - Reduced redundant code
 - Refined functions
-
-================================
+------
 
 ## - 2026-08-24
 ### Added
@@ -101,13 +97,13 @@ All notable changes to this project will be documented in this file.
 ## - 2026-08-23
 ### Added
 - Initial release of the project.
-
 ==========================================
 
 # Known bugs:
   - [FIXED] ~~Crash when handling: PermissionError: [Errno 13] Permission denied: '/usr/sbin/weakpass_edit'~~
   - [FIXED] ~~JSON unable to serialize signature value due to it being a bytes object.~~
   - Operation will timeout reading some files.
+======
 
 
 Lessons I've learned so far:
