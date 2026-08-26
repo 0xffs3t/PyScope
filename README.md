@@ -1,19 +1,50 @@
 # PyScope
 An open-source recursive forensic file scanning tool developed as a learner project. This project is actively being worked on and will improve along with my skills in Python. I plan to add more advanced features, polish the code and add more comments for fellow learners.
 
+==================================================
 
-<img width="3420" height="2214" alt="image" src="https://github.com/user-attachments/assets/2ca135c0-3cee-40e2-bf3a-151696987363" />
+<img width="566" height="425" alt="Screenshot 2026-08-25 at 10 20 14 PM" src="https://github.com/user-attachments/assets/7a996700-9204-4e83-870d-2d3b1f774ddb" />
 
 
-<img width="3420" height="2214" alt="image" src="https://github.com/user-attachments/assets/f5c9c508-318e-4b83-a11e-90b4c6dca505" />
+===================================================
+# Usage examples:
+---------------------
+```
+usage: pyscope.py [-h] [--version] [-v] [-l PATH] [-c PATH] [-r] [-C] path
 
+PyScope forensic filesystem scanner.
+
+positional arguments:
+  path                path to file or directory to analyze
+
+options:
+  -h, --help          show this help message and exit
+  --version           show program's version number and exit
+  -v, --verbose       enable verbose output mode
+  -l, --log PATH      save scan and change logs to specific path
+  -c, --compare PATH  compare current scan against specific scan log
+  -r, --recursive     prform a recursive scan
+
+Standard file scan:
+>  python pyscope.py [-r -v ] /path/to/file.bin
+
+Standard directory scan:
+>  python pyscope.py /path/to/dir
+
+Pattern scanning:
+>  python pyscope.py "/home/user/pictures/*.jpg"
+
+```
+
+===================================================
 
 Features include:
 ===================================================
   - Individual file examination
   - Recursive directory scanning
-  - Checking file format headers/signatures
-  - MD5 & SHA256 hash calculation
+  - Pattern scanning
+  - Checking file format signatures
+  - MD5 & SHA256 hash calculation & validation
   - Simple signature confidence
   - Error handling
   - Cross-platform compatibility
@@ -21,16 +52,34 @@ Features include:
   - Detect changes in files and save reports to json file
   - Detect hard link groups
   - Display UID & GID in scan summary
-  - Display invalid MD5/SHA256 hashes from previous scans.
   - Display file permissions
   - Display file flags
   - OS detection
   - Some fancy ASCII art
 
+=========================================
 
 # Changelog
-
+======================================
 All notable changes to this project will be documented in this file.
+
+## - 2026-08-25
+### Added
+- Pattern scanning
+- Argument powered CLI architecture
+- Cycling ASCII text when scanning
+- KeyboardInterrupt handling
+- Enhanced error handling
+- Enhanced workflow
+
+### Fixed
+- JSON serialization bug prevent scans writing to file
+- Enhanced distinction between RIFF & WAVE file signatures
+- Removed obsolete code
+- Reduced redundant code
+- Refined functions
+
+================================
 
 ## - 2026-08-24
 ### Added
@@ -53,11 +102,12 @@ All notable changes to this project will be documented in this file.
 ### Added
 - Initial release of the project.
 
+==========================================
 
 # Known bugs:
   - [FIXED] ~~Crash when handling: PermissionError: [Errno 13] Permission denied: '/usr/sbin/weakpass_edit'~~
+  - [FIXED] ~~JSON unable to serialize signature value due to it being a bytes object.~~
   - Operation will timeout reading some files.
-  - JSON unable to serialize signature value due to it being a bytes object.
 
 
 Lessons I've learned so far:
