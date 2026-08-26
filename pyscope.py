@@ -39,14 +39,11 @@ C = '\033[36m'  # cyan
 GR = '\033[37m'  # gray
 
 
-# ------- DEFINE FILENAME AND DIRECORY VARIABLES -------
+# ------- DEFINE SCRIPT DIRECORY & TIMESTAMP VARIABLES -------
 
 
 script_dir = Path(__file__).parent.resolve()
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-
-log_dir = script_dir / 'log'
-check_path = log_dir.mkdir(exist_ok=True)
 
 
 # ------- ESTABLISH HASH VALIDATION CLASSES -------
