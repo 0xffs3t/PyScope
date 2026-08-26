@@ -54,7 +54,6 @@ Features include:
   - Display file flags
   - OS detection
   - Some fancy ASCII art
-======
 
 # Changelog
 
@@ -97,7 +96,6 @@ All notable changes to this project will be documented in this file.
 ## - 2026-08-23
 ### Added
 - Initial release of the project.
-==========================================
 
 # Known bugs:
   - [FIXED] ~~Crash when handling: PermissionError: [Errno 13] Permission denied: '/usr/sbin/weakpass_edit'~~
