@@ -101,7 +101,6 @@ All notable changes to this project will be documented in this file.
   - [FIXED] ~~Crash when handling: PermissionError: [Errno 13] Permission denied: '/usr/sbin/weakpass_edit'~~
   - [FIXED] ~~JSON unable to serialize signature value due to it being a bytes object.~~
   - Operation will timeout reading some files.
-======
 
 
 Lessons I've learned so far:
