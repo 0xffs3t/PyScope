@@ -3,7 +3,7 @@ An open-source recursive forensic file scanning tool developed as a learner proj
 ======
 
 <img width="566" height="425" alt="Screenshot 2026-08-25 at 10 20 14 PM" src="https://github.com/user-attachments/assets/7a996700-9204-4e83-870d-2d3b1f774ddb" />
-======
+
 
 # Usage examples:
 ------
@@ -33,7 +33,7 @@ Pattern scanning:
 >  python pyscope.py "/home/user/pictures/*.jpg"
 
 ```
-======
+
 
 Features include:
 ======
@@ -53,8 +53,8 @@ Features include:
   - Display file flags
   - OS detection
   - Some fancy ASCII art
-
 ======
+
 # Changelog
 
 ======
