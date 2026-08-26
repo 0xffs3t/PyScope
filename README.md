@@ -1,8 +1,9 @@
 # PyScope
 An open-source recursive forensic file scanning tool developed as a learner project. This project is actively being worked on and will improve along with my skills in Python. I plan to add more advanced features, polish the code and add more comments for fellow learners.
-======
 
-<img width="566" height="425" alt="Screenshot 2026-08-25 at 10 20 14 PM" src="https://github.com/user-attachments/assets/7a996700-9204-4e83-870d-2d3b1f774ddb" />
+
+<img width="972" height="611" alt="Screenshot 2026-08-26 at 1 45 38 AM" src="https://github.com/user-attachments/assets/e83f5322-779f-449d-86ad-b1e52f1e93a6" />
+
 
 
 # Usage examples:
