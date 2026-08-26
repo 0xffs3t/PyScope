@@ -1078,7 +1078,7 @@ try:
         parser.add_argument(
             "-c", "--compare",
             metavar="PATH",
-            help="compare current scan aghainst previous scan"
+            help="compare current scan against specific scan log"
         )
 
         parser.add_argument(
