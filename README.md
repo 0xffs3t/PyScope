@@ -45,7 +45,6 @@ Features include:
   - MD5 & SHA256 hash calculation & validation
   - Simple signature confidence
   - Error handling
-  - Cross-platform compatibility
   - Save scans to json file
   - Detect changes in files and save reports to json file
   - Detect hard link groups
@@ -101,6 +100,7 @@ All notable changes to this project will be documented in this file.
   - [FIXED] ~~Crash when handling: PermissionError: [Errno 13] Permission denied: '/usr/sbin/weakpass_edit'~~
   - [FIXED] ~~JSON unable to serialize signature value due to it being a bytes object.~~
   - Operation will timeout reading some files.
+  - AttributeErrors on both Windows and Linux. (this is currently being worked on before adding more features)
 
 
 Lessons I've learned so far:
