@@ -2,7 +2,7 @@
 An open-source recursive forensic file scanning tool developed as a learner project. This project is actively being worked on and will improve along with my skills in Python. I plan to add more advanced features, polish the code and add more comments for fellow learners.
 
 
-<img width="972" height="611" alt="Screenshot 2026-08-26 at 1 45 38 AM" src="https://github.com/user-attachments/assets/e83f5322-779f-449d-86ad-b1e52f1e93a6" />
+<img width="972" height="611" alt="Screenshot 2026-09-01 at 10 32 09 PM" src="https://github.com/user-attachments/assets/f463a8af-f749-47d2-b0a0-05a88c6c0563" />
 
 
 
@@ -53,10 +53,16 @@ Features include:
   - Display file flags
   - OS detection
   - Some fancy ASCII art
+  - MacOS, Linux & Windows compatibility
 
 # Changelog
 
 All notable changes to this project will be documented in this file.
+
+## - 2026-09-01
+### Fixed
+- Linux & Windows compatibility
+- Minor bug fixes
 
 ## - 2026-08-25
 ### Added
@@ -99,8 +105,8 @@ All notable changes to this project will be documented in this file.
 # Known bugs:
   - [FIXED] ~~Crash when handling: PermissionError: [Errno 13] Permission denied: '/usr/sbin/weakpass_edit'~~
   - [FIXED] ~~JSON unable to serialize signature value due to it being a bytes object.~~
+  - [FIXED] ~~AttributeErrors on both Windows and Linux.~~
   - Operation will timeout reading some files.
-  - AttributeErrors on both Windows and Linux. (this is currently being worked on before adding more features)
 
 
 Lessons I've learned so far:
