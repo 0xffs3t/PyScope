@@ -83,8 +83,6 @@ All notable changes to this project will be documented in this file.
 
 ## - 2026-08-24 - 0.2
 ### Added
-- Added a new dark mode toggle to the settings menu.
-- Implemented user profile customization options.
 - Save scans to json file
 - Detect changes in files and save reports to json file
 - Detect hard link groups
