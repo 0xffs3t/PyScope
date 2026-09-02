@@ -783,7 +783,7 @@ def save_scan(scan_result, log_path):
     temp_path = output_path.with_suffix(output_path.suffix + ".tmp")
 
     data = {
-        "pyscope_version": "0.3",
+        "pyscope_version": "0.4",
         "scan_path": scan_result.scan_path,
         "scan_time": datetime.now().isoformat(),
         "scan_errors": scan_result.scan_error,
@@ -1164,7 +1164,7 @@ def parse_arguments():
     parser.add_argument(
         "--version",
         action="version",
-        version="Pyscope 0.3 / Python 3.14.7"
+        version="Pyscope 0.4 / Python 3.14.7"
     )
 
     parser.add_argument(
