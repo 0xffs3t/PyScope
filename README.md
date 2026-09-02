@@ -59,12 +59,12 @@ Features include:
 
 All notable changes to this project will be documented in this file.
 
-## - 2026-09-01
+## - 2026-09-01 - 0.4
 ### Fixed
 - Linux & Windows compatibility
 - Minor bug fixes
 
-## - 2026-08-25
+## - 2026-08-25 - 0.3
 ### Added
 - Pattern scanning
 - Argument powered CLI architecture
@@ -81,7 +81,7 @@ All notable changes to this project will be documented in this file.
 - Refined functions
 ------
 
-## - 2026-08-24
+## - 2026-08-24 - 0.2
 ### Added
 - Added a new dark mode toggle to the settings menu.
 - Implemented user profile customization options.
@@ -98,7 +98,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - Fixed a bug causing the application to crash when handling certain errors.
 
-## - 2026-08-23
+## - 2026-08-23 - 0.1
 ### Added
 - Initial release of the project.
 
